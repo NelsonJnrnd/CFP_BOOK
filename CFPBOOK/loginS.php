@@ -4,7 +4,7 @@ session_start();
         // Connexion à la base de données
                 try
                 {
-                        $bdd = new PDO('mysql:host=localhost;dbname=test1;charset=utf8', 'root', '');
+                        $bdd = new PDO('mysql:host=localhost;dbname=cfpbook;charset=utf8', 'root', '');
                 }
                 catch(Exception $e)
                 {
@@ -12,15 +12,15 @@ session_start();
                 }
                 
 
-        $psdL = filter_input(INPUT_POST, 'psdL', FILTER_SANITIZE_STRING);
-        $mdpL = filter_input(INPUT_POST, 'mdpL', FILTER_SANITIZE_STRING);
+        $nomL = filter_input(INPUT_POST, 'nomL', FILTER_SANITIZE_STRING);
+        $pswL = filter_input(INPUT_POST, 'pswL', FILTER_SANITIZE_STRING);
         
       
         // Vérification des identifiants
-        $login = $bdd->prepare('SELECT * FROM personnes WHERE psd = :psdL AND mdp = :mdpL');
+        $login = $bdd->prepare('SELECT * FROM utilisateurs WHERE nom = :nomL AND psw = :pswL');
         $login->execute(array(
-            'psdL' => $psdL,
-            'mdpL' => $mdpL));
+            'nomL' => $nomL,
+            'pswL' => $pswL));
 
         $resultat = $login->fetch();
 
@@ -28,19 +28,20 @@ session_start();
         {
             $_SESSION['loginOk'] = 1;
             header('location: login.php');
+            exit();
         }
         else
         {
-            $_SESSION['idPersonne'] = $resultat['idPersonne'];
-            $_SESSION['psdL'] = $psdL;
+            $_SESSION['idUtilisateur'] = $resultat['idUtilisateur'];
+            $_SESSION['nomL'] = $nomL;
             $_SESSION['login'] = TRUE;
-            header('location: index.php');
+            header('location: global.php');
+            exit();
         }
 ?>
 <!DOCTYPE html>
 <html>
         <head>
-        <title>E-Portfolio Martins Dani</title>
         <meta charset="UTF-8">
         <link href="css/.css" rel="stylesheet" type="text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
