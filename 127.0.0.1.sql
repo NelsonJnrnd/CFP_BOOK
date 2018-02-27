@@ -1,9 +1,9 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.1.4
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 27 Février 2018 à 13:01
+-- Généré le :  Mar 27 Février 2018 à 14:58
 -- Version du serveur :  5.6.15-log
 -- Version de PHP :  5.4.24
 
@@ -47,6 +47,7 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `branche` varchar(100) NOT NULL,
   `psw` varchar(10000) NOT NULL,
   `pdp` longblob,
+  `email` varchar(1000) NOT NULL,
   PRIMARY KEY (`idUtilisateur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='informations Utilisateurs' AUTO_INCREMENT=1 ;
 
