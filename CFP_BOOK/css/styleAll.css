@@ -10,7 +10,11 @@ body
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
+a
+{
+    text-decoration: none;
+    color: white;
+}
 .card-texte
 {
   text-align: center;

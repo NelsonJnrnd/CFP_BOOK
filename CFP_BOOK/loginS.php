@@ -12,14 +12,14 @@ session_start();
                 }
                 
 
-        $nomL = filter_input(INPUT_POST, 'nomL', FILTER_SANITIZE_STRING);
+        $emailL = filter_input(INPUT_POST, 'emailL', FILTER_SANITIZE_STRING);
         $pswL = filter_input(INPUT_POST, 'pswL', FILTER_SANITIZE_STRING);
         
       
         // Vérification des identifiants
-        $login = $bdd->prepare('SELECT * FROM utilisateurs WHERE nom = :nomL AND psw = :pswL');
+        $login = $bdd->prepare('SELECT * FROM utilisateurs WHERE email = :emailL AND psw = :pswL');
         $login->execute(array(
-            'nomL' => $nomL,
+            'emailL' => $emailL,
             'pswL' => $pswL));
 
         $resultat = $login->fetch();
@@ -33,7 +33,7 @@ session_start();
         else
         {
             $_SESSION['idUtilisateur'] = $resultat['idUtilisateur'];
-            $_SESSION['nomL'] = $nomL;
+            $_SESSION['emailL'] = $emailL;
             $_SESSION['login'] = TRUE;
             header('location: global.php');
             exit();
