@@ -26,7 +26,7 @@ if ($Message === NULL) {
               'HeureEnvoi' => $HeureEnvoi
                 ));
 
-        echo 'vous etes enregistre';     
+        echo 'Si tu vois ce message, cest que je sais pas coder';     
 }
 
 

@@ -2,6 +2,8 @@
 session_start();
 
 $_SESSION['HeureEnvoi'] = '';
+$_SESSION['messageFeed'] = '';
+include 'receptionMessage.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,9 +17,10 @@ $_SESSION['HeureEnvoi'] = '';
     <body>
         <header><?php include 'navbar.php'; ?></header>
         <div class="card-texte">
-            <h4>global</h4></br>
+            <h4>Bonsoir</h4></br>
             <form action="global.php" method="post" onsubmit="envoiMessage">
-                <input class="w3-input" type="text" name="message">
+                <textarea  class="affichageChat" cols="95" rows="20" readonly><?php echo $_SESSION['messageFeed'] ?></textarea>
+                <input autofocus class="w3-input" type="text" name="message">
             </form>
         </div>
         <footer><?php include 'footer.php'; ?></footer>

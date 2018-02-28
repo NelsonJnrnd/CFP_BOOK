@@ -24,3 +24,7 @@ a
   width: 80%;
   color: white;
 }
+
+.affichageChat {
+    resize: none;
+}
