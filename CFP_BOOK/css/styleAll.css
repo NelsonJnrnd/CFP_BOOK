@@ -6,6 +6,7 @@ html
 
 body
 {
+    text-align: center;
   background-image: url('../img/fond.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
