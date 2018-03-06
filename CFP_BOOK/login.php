@@ -1,5 +1,5 @@
-<?php 
-   
+<?php
+
    if (session_status() == PHP_SESSION_NONE ){
     session_start();
 }
@@ -17,17 +17,14 @@
         <title></title>
     </head>
     <body>
-
-
-        <!-- TESTE -->
         <div class="card-texte">
         <form action="loginS.php" method="post">
-            <label for="login"><strong>LOGIN</strong> </label> <br> 
-            <label for="emailL">votre Email </label> <br> 
+            <label for="login"><strong>LOGIN</strong> </label> <br>
+            <label for="emailL">votre Email </label> <br>
             <input type="text" name="emailL" id="emailL" required/><br>
-            <label for="pswL">votre mot de passe </label> <br> 
+            <label for="pswL">votre mot de passe </label> <br>
             <input type="password" name="pswL" id="mdpL" required/><br>
-            
+
 <?php
 if ($_SESSION['loginOk'] == 1) {
     echo "<p>votre mot de passe ou votre identifiant n'est pas correcte</p>";
@@ -36,10 +33,8 @@ if ($_SESSION['loginOk'] == 1) {
 ?>
 
             <input type="submit" value="Login" />
+            <p><a href="inscription.php">Si tu n'est pas inscrit clique ICI!</a></p>
         </form>
-            <p><a href="inscription.php">Si tu n'est pas inscrit ICI!</a></p>
         </div>
-
-
     </body>
 </html>

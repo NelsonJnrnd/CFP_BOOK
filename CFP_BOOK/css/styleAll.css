@@ -6,11 +6,19 @@ html
 
 body
 {
-    text-align: center;
   background-image: url('../img/fond.jpg');
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment:fixed;
+  background-size: cover;
 }
+ input{
+   width: 100%;
+   border: none;
+   border-radius: 2px;
+   padding: 1%;
+   margin: 1%;
+ }
+
 a
 {
     text-decoration: none;

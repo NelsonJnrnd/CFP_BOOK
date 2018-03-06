@@ -22,8 +22,23 @@ and open the template in the editor.
 
     <body>
       <header><?php include 'navbar.php'; ?></header>
-      <div class="card-texte">
-        <h4>a propos</h4></br>
+      <div class="card-group">
+        <div class="card">
+          <img class="card-img-top" src="img/fond.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Dani Martins</h4>
+            <p class="card-text"></p>
+            <p class="card-text"><small class="text-muted"></small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="img/fond1.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Amandine Pouly</h4>
+            <p class="card-text"></p>
+            <p class="card-text"><small class="text-muted"></small></p>
+          </div>
+        </div>
       </div>
       <footer><?php include 'footer.php'; ?></footer>
     </body>

@@ -1,9 +1,9 @@
-﻿-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 4.1.4
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 27 Février 2018 à 14:58
+-- Généré le :  Mar 06 Mars 2018 à 15:16
 -- Version du serveur :  5.6.15-log
 -- Version de PHP :  5.4.24
 
@@ -30,8 +30,10 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `idMessage` int(11) NOT NULL AUTO_INCREMENT,
   `Message` longtext NOT NULL,
   `HeureEnvoi` datetime NOT NULL,
-  PRIMARY KEY (`idMessage`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `#idUtilisateur` int(11) NOT NULL,
+  PRIMARY KEY (`idMessage`),
+  UNIQUE KEY `#idUtilisateur` (`#idUtilisateur`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 -- --------------------------------------------------------
 
@@ -49,7 +51,24 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `pdp` longblob,
   `email` varchar(1000) NOT NULL,
   PRIMARY KEY (`idUtilisateur`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='informations Utilisateurs' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='informations Utilisateurs' AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `utilisateurs`
+--
+
+INSERT INTO `utilisateurs` (`idUtilisateur`, `nom`, `prenom`, `age`, `branche`, `psw`, `pdp`, `email`) VALUES
+(1, 'Mieville', 'Vanille', 19, 'Informatique', 'VanilleM', NULL, 'vanille.pouly@gmail.com');
+
+--
+-- Contraintes pour les tables exportées
+--
+
+--
+-- Contraintes pour la table `messages`
+--
+ALTER TABLE `messages`
+  ADD CONSTRAINT `messages_ibfk_1` FOREIGN KEY (`#idUtilisateur`) REFERENCES `utilisateurs` (`idUtilisateur`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
