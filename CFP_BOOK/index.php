@@ -27,7 +27,25 @@ and open the template in the editor.
         <div class="card" style="background: rgba(255, 255, 255, .8); margin: 30px;">
           <div class="card-body">
             <p class="card-text">
-                Bienvenu(e) sur ce site de tchat pour les étudiants du CFP : le CFPBook
+                Bienvenu(e) sur ce site de chat pour les étudiants du CFP : le CFPBook
+            </p>
+            <p class="card-text">
+              Désolés de devoir vous embeter avec des règles mais c'est obligatoire <br>
+              <small class="card-text" style="color: red">
+                Vous pouvez être banni pour non-respect de ces règles
+              </small>
+            </p>
+            <p class="card-text">
+              <ul>
+                <li>respectez les autres utilisateurs</li>
+                <li>pas de transfert de liens illicites ou déplacés</li>
+              </ul>
+            </p>
+            <p class="card-text">
+              Merci de vous servir de notre site et de respecter ses quelques règles :)
+            </p>
+            <p class="card-text">
+              Et si vous avez des demandes ou idées d'améliorations aller dans l'onglet a propos et parler avec l'un des créateurs.
             </p>
             <small class="card-text">
                 Développé par des étudiants en informatique

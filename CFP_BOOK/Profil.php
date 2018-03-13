@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 try
 {
         $bdd = new PDO('mysql:host=localhost;dbname=cfpbook;charset=utf8', 'root', '');
@@ -16,6 +15,11 @@ $Profil->execute(array(
     'idUtilisateur' => $_SESSION['idUtilisateur']));
 
 $resultat = $Profil->fetch();
+
+if (!isset($_SESSION['login']) || $_SESSION['login'] == FALSE ) {
+    header("location: login.php");
+  exit();
+}
  ?>
 
  <html>
@@ -23,12 +27,12 @@ $resultat = $Profil->fetch();
      <head>
          <link href="css/styleAll.css" rel="stylesheet" type="text/css"/>
          <meta charset="UTF-8">
-         <title>Inscription</title>
+         <title>profil</title>
 
      </head>
 
      <body>
-
+       <header><?php include 'navbar.php'; ?></header>
 
          <div class="card-texte">
          <form action="bddUpdate.php" method="post">
