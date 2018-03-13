@@ -2,14 +2,8 @@
 session_start();
 
         // Connexion à la base de données
-                try
-                {
-                        $bdd = new PDO('mysql:host=localhost;dbname=cfpbook;charset=utf8', 'root', '');
-                }
-                catch(Exception $e)
-                {
-                        die('Erreur : '.$e->getMessage());
-                }
+        include 'connectionBdd.php';
+        $bdd = getConnection();
                 
 
         $emailL = filter_input(INPUT_POST, 'emailL', FILTER_SANITIZE_STRING);

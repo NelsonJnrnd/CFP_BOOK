@@ -1,13 +1,12 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['login']) || $_SESSION['login'] == FALSE ) {
+if (!isset($_SESSION['login']) || $_SESSION['login'] == FALSE) {
     header("location: login.php");
-  exit();
+    exit();
 }
 $_SESSION['HeureEnvoi'] = '';
 $_SESSION['messageFeed'] = '';
-include 'receptionMessage.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -22,39 +21,72 @@ include 'receptionMessage.php';
     <body>
         <header><?php include 'navbar.php'; ?></header>
         <div class="card" style="background: rgba(255, 255, 255, .8); margin: 30px;">
-      <div class="card-body">
-        <p class="card-texte">
-          <h4>CFPBook global</h4></br>
+            <div class="card-body">
+                <p class="card-texte">
+                <h4>CFPBook global</h4></br>
 
-               <ul class="MessageBox">
-                 <li style="width:100%"  class="text-l">
-                    <p> Bienvenu dans le global tchat</p>
-                    <p><small>
-                      <?php
-                      $today = date("Y-m-d H:i:s");
-                      echo $today;
-                     ?>
-                   </small></p>
-                  </li>
-               </ul>
-                 <div style="background:whitesmoke ">
-                   <form  action="global.php" method="post" onsubmit="envoiMessage">
-                     <input  type="text" name="Message" class="mytext" placeholder="votre message"/>
-                     <input type="submit" value="Envoyer" class="btn btn-primary"  />
-                   </form>
-                  </div>
+                <ul class="MessageBox">
+                    <li style="width:100%"  class="text-l">
+                        <p> Bienvenu dans le global tchat</p>
+                        <p><small>
+                                <?php
+                                $today = date("Y-m-d H:i:s");
+                                echo $today;
+                                ?>
+                                <br>
+                                <span id="tchat">
+
+                                </span>
+                            </small></p>
+                    </li>
+                </ul>
+                <div style="background:whitesmoke ">
+                    <input  type="text" name="Message" id="message" class="mytext" placeholder="votre message"/>
+                    <button onclick="envoiMessage()" type="submit" value="Envoyer" class="btn btn-primary">Click me</button>
+                </div>
                 </p>
-        </p>
-      </div>
-    </div>
+                </p>
+            </div>
+        </div>
         <footer><?php include 'footer.php'; ?></footer>
-        <script type="text/javascript">
+        <script>
+
             function envoiMessage() {
-<?php
-$_SESSION['HeureEnvoi'] = date("Y-m-d H:i:s");
-include_once 'envoieMessage.php';
-?>
+                var xmlhttp = new XMLHttpRequest();
+                var url = "./envoieMessage.php";
+
+                xmlhttp.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                    }
+                    ;
+
+
+                };
+                var data = new FormData();
+                data.append('MessageEnvoi', document.getElementById("message").value);
+                xmlhttp.open("post", url, true);
+                xmlhttp.send(data);
+                document.getElementById("message").value = "";
             }
+            
+
+
+            function checkMessage() {
+                var xmlhttp = new XMLHttpRequest();
+                var url = "./receptionMessage.php";
+
+                xmlhttp.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        document.getElementById("tchat").innerHTML = this.responseText;
+                    }
+                };
+
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+            }
+            
+
+            setInterval(checkMessage, 500);
         </script>
     </body>
 </html>

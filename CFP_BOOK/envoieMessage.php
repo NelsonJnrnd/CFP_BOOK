@@ -1,32 +1,22 @@
 <?php
+
 session_start();
-            // Connexion à la base de données
-                try
-                {
-                        $bdd = new PDO('mysql:host=localhost;dbname=cfpbook;charset=utf8', 'root', '');
-                }
-                catch(Exception $e)
-                {
-                        die('Erreur : '.$e->getMessage());
-                }
+include 'connectionBdd.php';
 
-
-                $Message = filter_input( INPUT_POST, 'message', FILTER_SANITIZE_STRING);
-                $HeureEnvoi = $_SESSION['HeureEnvoi'];
-                
+$Message = filter_input(INPUT_POST, 'MessageEnvoi', FILTER_SANITIZE_STRING);
+$HeureEnvoi = date("Y-m-d H:i:s");
 if ($Message === NULL) {
-        echo 'veuillez passer par le formulaire !!!';
-}
- else {
-    
- 
-        $req = $bdd->prepare('INSERT INTO messages(Message, HeureEnvoi) VALUES(:Message, :HeureEnvoi)');
-        $req->execute(array(
-                'Message' => $Message,
-              'HeureEnvoi' => $HeureEnvoi
-                ));
+    echo 'veuillez passer par le formulaire !!!';
+} else {
 
-        echo 'Si tu vois ce message, cest que je sais pas coder';     
+    $bdd = getConnection();
+    $req = $bdd->prepare('INSERT INTO messages(Message, HeureEnvoi, idUtilisateur) VALUES(:Message, :HeureEnvoi, :idUtilisateur)');
+    $result = $req->execute(array(
+        'Message' => $Message,
+        'HeureEnvoi' => $HeureEnvoi,
+        'idUtilisateur' => $_SESSION['idUtilisateur']
+    ));
+    echo $result;
 }
 
 
