@@ -9,7 +9,8 @@
        <ul class="topnav">
          <li><a class="active" href="index.php">CFPBook</a></li>
          <li><a href="global.php">Global</a></li>
-         <li class="right"><a href="deconexion.php">Deconexion</a></li>
+         <li class="right"><a href="deconexion.php">Deconnexion</a></li>
+         <li class="right"><a href="Profil.php">Votre profil</a></li>
          <li class="right"><a href="aPropos.php">A propos</a></li>
        </ul>
 
