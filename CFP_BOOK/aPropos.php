@@ -16,30 +16,40 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>CFPBook</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link href="css/styleAll.css" rel="stylesheet" type="text/css"/>
   </head>
 
     <body>
       <header><?php include 'navbar.php'; ?></header>
-      <div class="card-group">
-        <div class="card">
-          <img class="card-img-top" src="img/fond.jpg" alt="Card image cap">
-          <div class="card-block">
-            <h4 class="card-title">Dani Martins</h4>
-            <p class="card-text"></p>
-            <p class="card-text"><small class="text-muted"></small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="img/fond1.jpg" alt="Card image cap">
-          <div class="card-block">
-            <h4 class="card-title">Amandine Pouly</h4>
-            <p class="card-text"></p>
-            <p class="card-text"><small class="text-muted"></small></p>
-          </div>
-        </div>
-      </div>
+	  
+	  <div class="card-group">
+  <div class="card">
+    <img class="card-img-top" src="img/fond1.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Dani Martins</h5>
+      <p class="card-text">Elle a l'regard qui tue Tchikita Cheveux longs comme Nikita Si elle me quitte pas, j'la quitte pas Tchikita, Tchikita</p>
+      <p class="card-text"><small class="text-muted">Dernière connexion 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="img/fond1.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Amandine Pouly</h5>
+      <p class="card-text">Elle a l'regard qui tue Tchikita Cheveux longs comme Nikita Si elle me quitte pas, j'la quitte pas Tchikita, Tchikita</p>
+      <p class="card-text"><small class="text-muted">Dernière connexion 3 mins ago</small></p>
+    </div>
+  </div>
+   <div class="card">
+    <img class="card-img-top" src="img/fond1.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Nelson Jeanrenaud</h5>
+      <p class="card-text">Elle a l'regard qui tue Tchikita Cheveux longs comme Nikita Si elle me quitte pas, j'la quitte pas Tchikita, Tchikita</p>
+      <p class="card-text"><small class="text-muted">Dernière connexion 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
       <footer><?php include 'footer.php'; ?></footer>
     </body>
 </html>
