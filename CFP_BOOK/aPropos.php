@@ -29,7 +29,7 @@ and open the template in the editor.
     <img class="card-img-top" src="img/fond1.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Dani Martins</h5>
-      <p class="card-text">Elle a l'regard qui tue Tchikita Cheveux longs comme Nikita Si elle me quitte pas, j'la quitte pas Tchikita, Tchikita</p>
+      <p class="card-text">Email: dani.mrtns@eduge.ch</p>
       <p class="card-text"><small class="text-muted">Dernière connexion 3 mins ago</small></p>
     </div>
   </div>
@@ -37,7 +37,7 @@ and open the template in the editor.
     <img class="card-img-top" src="img/fond1.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Amandine Pouly</h5>
-      <p class="card-text">Elle a l'regard qui tue Tchikita Cheveux longs comme Nikita Si elle me quitte pas, j'la quitte pas Tchikita, Tchikita</p>
+      <p class="card-text">Email: amandine.pl@eduge.ch</p>
       <p class="card-text"><small class="text-muted">Dernière connexion 3 mins ago</small></p>
     </div>
   </div>
@@ -45,7 +45,7 @@ and open the template in the editor.
     <img class="card-img-top" src="img/fond1.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Nelson Jeanrenaud</h5>
-      <p class="card-text">Elle a l'regard qui tue Tchikita Cheveux longs comme Nikita Si elle me quitte pas, j'la quitte pas Tchikita, Tchikita</p>
+      <p class="card-text">Email: nelson.jnrnd@eduge.ch</p>
       <p class="card-text"><small class="text-muted">Dernière connexion 3 mins ago</small></p>
     </div>
   </div>
