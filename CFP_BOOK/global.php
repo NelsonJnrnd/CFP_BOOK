@@ -31,7 +31,7 @@ $_SESSION['messageFeed'] = '';
                         <p><small>
                                 <?php
                                 $today = date("Y-m-d H:i:s");
-                                
+
                                 ?>
                                 <br>
                                 <span id="tchat">
@@ -41,8 +41,8 @@ $_SESSION['messageFeed'] = '';
                     </li>
                 </ul>
                 <div style="background:whitesmoke ">
-                    <input  type="text" name="Message" id="message" class="mytext" placeholder="votre message"/>
-                    <button onclick="envoiMessage()" type="submit" value="Envoyer" class="btn btn-primary">Click me</button>
+                    <input style="width:99%;" type="text" name="Message" id="message" class="mytext" placeholder="votre message"/>
+                    <button style="width:100%;" onclick="envoiMessage()" type="submit" value="Envoyer" class="btn btn-primary">Click me</button>
                 </div>
                 </p>
                 </p>
@@ -68,7 +68,7 @@ $_SESSION['messageFeed'] = '';
                 xmlhttp.send(data);
                 document.getElementById("message").value = "";
             }
-            
+
 
 
             function checkMessage() {
@@ -84,7 +84,7 @@ $_SESSION['messageFeed'] = '';
                 xmlhttp.open("GET", url, true);
                 xmlhttp.send();
             }
-            
+
 
             setInterval(checkMessage, 500);
         </script>
