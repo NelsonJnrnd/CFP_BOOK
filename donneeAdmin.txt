@@ -1,0 +1,4 @@
+nom : admin
+prenom : admin
+email : admin@eduge.ch
+mdp : AdminSuperCfp_book
