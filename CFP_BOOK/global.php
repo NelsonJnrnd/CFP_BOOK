@@ -31,7 +31,7 @@ $_SESSION['messageFeed'] = '';
                         <p><small>
                                 <?php
                                 $today = date("Y-m-d H:i:s");
-                                echo $today;
+                                
                                 ?>
                                 <br>
                                 <span id="tchat">
