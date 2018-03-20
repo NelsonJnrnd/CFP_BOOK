@@ -8,6 +8,8 @@ and open the template in the editor.
 
     <head>
         <link href="css/styleAll.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <meta charset="UTF-8">
         <title>Inscription</title>
 
@@ -18,30 +20,49 @@ and open the template in the editor.
         <?php
         // put your code here
         ?>
-        <div class="card-texte">
-        <form action="bdd.php" method="post">
-
-            <label for="nom">votre nom</label> <br>
-            <input type="text" name="nom" id="nom" required/><br>
-            <label for="prenom">votre prenom</label><br>
-            <input type="text" name="prenom" id="prenom"required/><br>
-            <label for="age">votre age</label><br>
-            <input type="int" name="age" id="age" required/><br>
-            <label for="email">votre Email</label><br>
-            <input type="email" name="email" id="email" required/><br>
-            <label for="mdp">votre mot de passe</label><br>
-            <input type="password" name="mdp" id="mdp" required/><br>
-            <label for="mdp2">confirmer votre mot de passe</label><br>
-            <input type="password" name="mdp2" id="mdp2" required/><br>
-            <label for="branche">Votre branche</label><br>
-            <select name="branche">
-                <option value="Informatique">Informatique</option>
-                <option value="Horlogerie">Horlogerie</option>
-                <option value="Electro">Electronique</option>
-            </select><br>
-            <input type="submit" value="Envoyer" />
-
-        </form>
+        <div class="card card-outline-secondary" style="margin: 10%;">
+               <div class="card-header">
+                    <label for="inscription"> <h3 class="mb-0">inscription</h3></label> <br>
+               </div>
+               <div class="card-body">
+                        <form action="bdd.php" method="post">
+                            <div class="form-group">
+                                <label for="nom">votre nom</label> <br>
+                                <input class="form-control" type="text" name="nom" id="nom" required/><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="prenom">votre prenom</label><br>
+                                <input class="form-control" type="text" name="prenom" id="prenom"required/><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="age">votre age</label><br>
+                                <input class="form-control" type="int" name="age" id="age" required/><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">votre Email</label><br>
+                                <input class="form-control" type="email" name="email" id="email" required/><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="mdp">votre mot de passe</label><br>
+                                <input class="form-control" type="password" name="mdp" id="mdp" required/><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="mdp2">confirmer votre mot de passe</label><br>
+                                <input class="form-control" type="password" name="mdp2" id="mdp2" required/><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="branche">Votre branche</label><br>
+                                <select name="branche" class="form-control">
+                                    <option value="Informatique">Informatique</option>
+                                    <option value="Horlogerie">Horlogerie</option>
+                                    <option value="Electro">Electronique</option>
+                                </select><br>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Envoyer" />
+                            </div>
+                        </form>
+                </div>
         </div>
     </body>
 
