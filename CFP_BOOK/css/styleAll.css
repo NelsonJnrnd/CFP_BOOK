@@ -31,18 +31,11 @@ a
   margin-left: 10%;
   height: 80%;
   width: 80%;
-  color: white;
+    color: white;
+
 }
 
-.card-body
-{
-  text-decoration-color: black;
-  text-align: center;
-  margin: 10%;
-  height: 80%;
-  width: 80%;
-  color: white;
-}
+
 
 .affichageChat {
     resize: none;
