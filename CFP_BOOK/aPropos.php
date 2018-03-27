@@ -23,30 +23,30 @@ and open the template in the editor.
 
     <body>
       <header><?php include 'navbar.php'; ?></header>
-	  
+
 	  <div class="card-group">
   <div class="card">
-    <img class="card-img-top" src="img/fond1.jpg" alt="Card image cap">
+    <img class="card-img-top" src="img/Martins.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Dani Martins</h5>
+      <p class="card-text">Etudiant en deuxième année CFC 4 ans informaticien</p>
       <p class="card-text">Email: dani.mrtns@eduge.ch</p>
-      <p class="card-text"><small class="text-muted">Dernière connexion 3 mins ago</small></p>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="img/fond1.jpg" alt="Card image cap">
+    <img class="card-img-top" src="img/Pouly.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Amandine Pouly</h5>
+            <p class="card-text">Etudiant en deuxième année CFC 3 ans informaticien</p>
       <p class="card-text">Email: amandine.pl@eduge.ch</p>
-      <p class="card-text"><small class="text-muted">Dernière connexion 3 mins ago</small></p>
     </div>
   </div>
    <div class="card">
-    <img class="card-img-top" src="img/fond1.jpg" alt="Card image cap">
+    <img class="card-img-top" src="img/JeanRenaud.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Nelson Jeanrenaud</h5>
+            <p class="card-text">Etudiant en deuxième année CFC 4 ans informaticien</p>
       <p class="card-text">Email: nelson.jnrnd@eduge.ch</p>
-      <p class="card-text"><small class="text-muted">Dernière connexion 3 mins ago</small></p>
     </div>
   </div>
 </div>
