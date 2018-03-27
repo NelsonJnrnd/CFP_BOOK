@@ -33,7 +33,6 @@ $_SESSION['messageFeed'] = '';
                         <p><small>
                                 <?php
                                 $today = date("Y-m-d H:i:s");
-
                                 ?>
                                 <br>
                                 <span id="tchat">
@@ -47,12 +46,20 @@ $_SESSION['messageFeed'] = '';
                 </div>
                 <div style="background:whitesmoke ">
                     <input style="width:99%;" type="text" name="Message" id="message" class="mytext" placeholder="votre message"/>
-                    <button style="width:100%;" onclick="envoiMessage()" type="submit" value="Envoyer" class="btn btn-primary">Envoyer</button>
+                    <button style="width:100%;" onclick="envoiMessage()" id="button" type="submit" value="Envoyer" class="btn btn-primary">Envoyer</button>
                 </div>
 
         </div>
         <footer><?php include 'footer.php'; ?></footer>
         <script>
+
+            var textbox = document.getElementById("message");
+            textbox.addEventListener("keyup", function (event) {
+                event.preventDefault();
+                if (event.keyCode === 13) {
+                    document.getElementById("button").click();
+                }
+            });
 
             function envoiMessage() {
                 var xmlhttp = new XMLHttpRequest();
