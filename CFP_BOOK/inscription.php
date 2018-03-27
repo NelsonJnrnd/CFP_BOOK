@@ -55,7 +55,15 @@ and open the template in the editor.
                                 <select name="branche" class="form-control">
                                     <option value="Informatique">Informatique</option>
                                     <option value="Horlogerie">Horlogerie</option>
-                                    <option value="Electro">Electronique</option>
+                                    <option value="Electronicien">Electronique</option>
+                                    <option value="Electricien">Electricien</option>
+                                    <option value="Mecanique">Mecanique</option>
+                                    <option value="Polymecanique">Polymecanique</option>
+                                    <option value="Micromecanicique">Micromecanicique</option>
+                                    <option value="Automatique">Automatique</option>
+                                    <option value="Carrossier">Carrossier</option>
+                                    <option value="LaborantinsPhysique">Laborant en physique</option>
+                                    <option value="LaborantinsBiologie">Laborant en Biologie</option>
                                 </select><br>
                             </div>
                             <div class="form-group">

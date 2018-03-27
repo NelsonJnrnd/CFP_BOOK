@@ -52,9 +52,17 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == FALSE) {
                     <input type="password" name="mdp2N" id="mdp2N" required/><br>
                     <label for="branche">Votre branche</label><br>
                     <select name="branche">
-                        <option value="Informatique">Informatique</option>
-                        <option value="Horlogerie">Horlogerie</option>
-                        <option value="Electro">Electronique</option>
+                      <option value="Informatique">Informatique</option>
+                      <option value="Horlogerie">Horlogerie</option>
+                      <option value="Electronicien">Electronique</option>
+                      <option value="Electricien">Electricien</option>
+                      <option value="Mecanique">Mecanique</option>
+                      <option value="Polymecanique">Polymecanique</option>
+                      <option value="Micromecanicique">Micromecanicique</option>
+                      <option value="Automatique">Automatique</option>
+                      <option value="Carrossier">Carrossier</option>
+                      <option value="LaborantinsPhysique">Laborant en physique</option>
+                      <option value="LaborantinsBiologie">Laborant en Biologie</option>
                     </select><br>
                     <label for="mdp">Confirmer votre mot de passe pour valider les changements</label><br>
                     <input type="password" name="mdp" id="mdp" required/><br><br>
