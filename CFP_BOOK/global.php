@@ -13,6 +13,7 @@ $_SESSION['messageFeed'] = '';
     <head>
         <meta charset="UTF-8">
         <title>CFPBook global</title>
+        <link rel="icon" type="image/ico" href="img/cfptGlobal.png" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link href="css/styleAll.css" rel="stylesheet" type="text/css"/>
@@ -21,6 +22,7 @@ $_SESSION['messageFeed'] = '';
     <body>
         <header><?php include 'navbar.php'; ?></header>
         <div class="card" style="background: rgba(255, 255, 255, .8); margin: 30px;">
+          <div class="card" style="background: rgba(255, 255, 255, .1); max-height: 670px;  overflow-x: hidden;overflow-y:scroll;">
             <div class="card-body">
                 <p class="card-texte">
                 <h4>CFPBook global</h4></br>
@@ -40,13 +42,14 @@ $_SESSION['messageFeed'] = '';
                             </small></p>
                     </li>
                 </ul>
+                </p>
+                </div>
+                </div>
                 <div style="background:whitesmoke ">
                     <input style="width:99%;" type="text" name="Message" id="message" class="mytext" placeholder="votre message"/>
                     <button style="width:100%;" onclick="envoiMessage()" type="submit" value="Envoyer" class="btn btn-primary">Envoyer</button>
                 </div>
-                </p>
-                </p>
-            </div>
+
         </div>
         <footer><?php include 'footer.php'; ?></footer>
         <script>
