@@ -42,7 +42,7 @@ $_SESSION['messageFeed'] = '';
                 </ul>
                 <div style="background:whitesmoke ">
                     <input style="width:99%;" type="text" name="Message" id="message" class="mytext" placeholder="votre message"/>
-                    <button style="width:100%;" onclick="envoiMessage()" type="submit" value="Envoyer" class="btn btn-primary">Click me</button>
+                    <button style="width:100%;" onclick="envoiMessage()" type="submit" value="Envoyer" class="btn btn-primary">Envoyer</button>
                 </div>
                 </p>
                 </p>
