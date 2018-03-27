@@ -32,8 +32,21 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == FALSE) {
     <body>
         <header><?php include 'navbar.php'; ?></header>
 
-        <div class="card-texte">
-            <div style="width: 40%; float: right;" class="card-deck">
+        <div style="margin: 10px" class="card-deck">
+            
+               <div style="width: 30%; height: 71%; min-width: 400px; margin: auto;" class="card-deck">
+                <div class="card">
+                    <img style="height: 70%;" class="card-img-top" src="img/cfptInformatique.png" alt="Card image cap">
+                    <div  class="card-body">
+                        <label style="color: black;" class="card-title" for="nom">Nom : <?php echo $resultat['nom'] ?></label> <br>
+                        <label style="color: black;" class="card-title" for="prenom">Prenom : <?php echo $resultat['prenom'] ?></label> <br>
+                        <label style="color: black;" class="card-title" for="dateNaissance">dateNaissance : <?php echo $resultat['dateNaissance'] ?></label> <br>
+                        <label style="color: black;" class="card-title" for="email">Email : <?php echo $resultat['email'] ?></label> <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 40%; min-width: 700px; float: right; background-color: transparent; color: white;" class="card">
 
                 <form action="bddUpdate.php" method="post">
 
@@ -71,18 +84,6 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == FALSE) {
                 </form>
             </div>
 
-            <div style="width: 30%; height: 75%;" class="card-deck">
-                <div class="card">
-                    <img style="height: 70%;" class="card-img-top" src="img/cfptInformatique.png" alt="Card image cap">
-                    <div  class="card-body">
-                        <label style="color: black;" class="card-title" for="nom">Nom : <?php echo $resultat['nom'] ?></label> <br>
-                        <label style="color: black;" class="card-title" for="prenom">Prenom : <?php echo $resultat['prenom'] ?></label> <br>
-                        <label style="color: black;" class="card-title" for="dateNaissance">dateNaissance : <?php echo $resultat['dateNaissance'] ?></label> <br>
-                        <label style="color: black;" class="card-title" for="email">Email : <?php echo $resultat['email'] ?></label> <br>
-                        <br>
-                    </div>
-                </div>
-            </div>
 
 
 
