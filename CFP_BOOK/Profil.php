@@ -42,8 +42,8 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == FALSE) {
                     <input type="text" name="nomN" id="nomN" required/><br>
                     <label for="prenom">Votre nouveau prenom</label><br>
                     <input type="text" name="prenomN" id="prenomN" required/><br>
-                    <label for="prenom">Votre nouvel age</label><br>
-                    <input type="int" name="ageN" id="ageN" required/><br>
+                    <label for="prenom">Votre nouvel date de naissance</label><br>
+                    <input type="date" name="dateNaissanceN" id="dateNaissanceN" required/><br>
                     <label for="prenom">Votre nouvel email</label><br>
                     <input type="email" name="emailN" id="emailN" required/><br>
                     <label for="mdp">Votre nouveau mot de passe</label><br>
@@ -69,7 +69,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == FALSE) {
                     <div  class="card-body">
                         <label style="color: black;" class="card-title" for="nom">Nom : <?php echo $resultat['nom'] ?></label> <br>
                         <label style="color: black;" class="card-title" for="prenom">Prenom : <?php echo $resultat['prenom'] ?></label> <br>
-                        <label style="color: black;" class="card-title" for="age">Age : <?php echo $resultat['age'] ?></label> <br>
+                        <label style="color: black;" class="card-title" for="dateNaissance">dateNaissance : <?php echo $resultat['dateNaissance'] ?></label> <br>
                         <label style="color: black;" class="card-title" for="email">Email : <?php echo $resultat['email'] ?></label> <br>
                         <br>
                     </div>

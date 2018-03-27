@@ -35,8 +35,8 @@ and open the template in the editor.
                                 <input class="form-control" type="text" name="prenom" id="prenom"required/><br>
                             </div>
                             <div class="form-group">
-                                <label for="age">votre age</label><br>
-                                <input class="form-control" type="int" name="age" id="age" required/><br>
+                                <label for="dateNaissance">votre date de naissance</label><br>
+                                <input class="form-control" type="date" name="dateNaissance" id="dateNaissance" required/><br>
                             </div>
                             <div class="form-group">
                                 <label for="email">votre Email</label><br>
